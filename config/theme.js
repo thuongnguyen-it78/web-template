@@ -1,6 +1,9 @@
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 let theme = createTheme({
+  typography: {
+		fontFamily: 'Rubik, sans-serif',
+	},
   palette: {
     primary: {
       main: "#F4A634",
