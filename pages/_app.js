@@ -6,6 +6,7 @@ import * as React from "react";
 import MainLayout from "../components/Layout/MainLayout";
 import createEmotionCache from "../config/createEmotionCache";
 import theme from "../config/theme";
+import { SystemProvider } from "../context/SystemContext";
 import "../styles/globals.css";
 
 // Client-side cache, shared for the whole session of the user in the browser.
@@ -22,9 +23,11 @@ export default function MyApp(props) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <SystemProvider>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </SystemProvider>
       </ThemeProvider>
     </CacheProvider>
   );

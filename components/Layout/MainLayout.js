@@ -1,4 +1,5 @@
 import { Box, Stack } from "@mui/material";
+import GlobalLoading from "../GlobalLoading";
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -10,6 +11,7 @@ export default function MainLayout({ children }) {
         {children}
       </Box>
       <Footer />
+      <GlobalLoading />
     </Stack>
   );
 }
